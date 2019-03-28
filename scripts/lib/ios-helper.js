@@ -35,7 +35,7 @@ module.exports = {
             buildActionMask: 2147483647,
             files: [],
             inputPaths: [
-                "$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)"
+                '"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)"'
             ],
             name: comment,
             outputPaths: [],
