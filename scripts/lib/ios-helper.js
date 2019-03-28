@@ -1,8 +1,7 @@
 //sourced from https://github.com/sarriaroman/FabricPlugin/blob/master/hooks/lib/ios-helper.js
 
 var fs = require("fs");
-var path = require("path");
-var utilities = require("./utilities");
+var xcode = require("xcode");
 
 /**
  * This is used as the display text for the build phase block in XCode as well as the
@@ -18,9 +17,7 @@ module.exports = {
      * tool with the API and Secret keys. This tool is used to upload the debug symbols
      * (dSYMs) so that Crashlytics can display stack trace information in it's web console.
      */
-    addShellScriptBuildPhase: function (context, xcodeProjectPath) {
-
-        var xcode = context.requireCordovaModule("xcode");
+    addShellScriptBuildPhase: function (xcodeProjectPath) {
 
         // Read and parse the XCode project (.pxbproj) from disk.
         // File format information: http://www.monobjc.net/xcode-project-file-format.html
@@ -73,9 +70,7 @@ module.exports = {
      * This helper is used to remove the build phase from the XCode project that was added
      * by the addShellScriptBuildPhase() helper method.
      */
-    removeShellScriptBuildPhase: function (context, xcodeProjectPath) {
-
-        var xcode = context.requireCordovaModule("xcode");
+    removeShellScriptBuildPhase: function (xcodeProjectPath) {
 
         // Read and parse the XCode project (.pxbproj) from disk.
         // File format information: http://www.monobjc.net/xcode-project-file-format.html

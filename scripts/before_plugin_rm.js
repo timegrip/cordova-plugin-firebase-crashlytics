@@ -11,6 +11,6 @@ module.exports = function(context) {
     // Remove the build script that was added when the plugin was installed.
     if (platforms.indexOf("ios") !== -1 && os.platform() === 'darwin') {
         var xcodeProjectPath = utilities.getXcodeProjectPath(context);
-        iosHelper.removeShellScriptBuildPhase(context, xcodeProjectPath);
+        iosHelper.removeShellScriptBuildPhase(xcodeProjectPath);
     }
 };

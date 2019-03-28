@@ -12,7 +12,7 @@ module.exports = function(context) {
     // run command line tool which uploads the debug symbols at build time.
     if (platforms.indexOf("ios") !== -1 && os.platform() === 'darwin') {
         var xcodeProjectPath = utilities.getXcodeProjectPath(context);
-        iosHelper.removeShellScriptBuildPhase(context, xcodeProjectPath);
-        iosHelper.addShellScriptBuildPhase(context, xcodeProjectPath);
+        iosHelper.removeShellScriptBuildPhase(xcodeProjectPath);
+        iosHelper.addShellScriptBuildPhase(xcodeProjectPath);
     }
 };
