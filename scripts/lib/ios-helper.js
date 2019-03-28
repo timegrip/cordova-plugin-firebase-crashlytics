@@ -34,7 +34,9 @@ module.exports = {
             isa: "PBXShellScriptBuildPhase",
             buildActionMask: 2147483647,
             files: [],
-            inputPaths: [],
+            inputPaths: [
+                "$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)"
+            ],
             name: comment,
             outputPaths: [],
             runOnlyForDeploymentPostprocessing: 0,
