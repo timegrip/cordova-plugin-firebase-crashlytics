@@ -67,6 +67,9 @@
     </config-file>
 
     <podspec>
+      <config>
+        <source url="https://github.com/CocoaPods/Specs.git" />
+      </config>
       <pods use-frameworks="true">
         <pod name="Fabric" spec="~> 1.7.6" />
         <pod name="Crashlytics" spec="~> 3.10.1" />
